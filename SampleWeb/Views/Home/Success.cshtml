@@ -1,0 +1,19 @@
+﻿@model SampleWeb.Models.ContactFormModel
+
+@{
+    ViewData["Title"] = "Success!!";
+}
+
+<div class="container mt-5">
+    <h2>Success</h2>
+    <p>Your message has been sent successfully!</p>
+
+    <h4>Submitted Data</h4>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Name:</strong> @Html.DisplayFor(m => m.Name)</li>
+        <li class="list-group-item"><strong>Email:</strong> @Html.DisplayFor(m => m.Email)</li>
+        <li class="list-group-item"><strong>Message:</strong> @Html.DisplayFor(m => m.Message)</li>
+    </ul>
+
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary mt-3">Go Back</a>
+</div>
